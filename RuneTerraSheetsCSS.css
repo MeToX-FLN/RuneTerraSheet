@@ -1,0 +1,2652 @@
+/* ************************************************************************************************************************************************ */
+/* Whole Sheet */
+/* ************************************************************************************************************************************************ */
+
+div.sheet-runeterra-charsheet {
+    background: url("https://cdn.discordapp.com/attachments/681918935809130568/1028077744485056724/Back.png");
+    background-position:center;
+    background-size: cover;
+    width: 830px;
+}
+
+span.sheet-section-title {
+    font-size:      15px;
+    vertical-align: middle;
+    text-align:     center;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    font-weight:    bold;
+    justify-self:   center;
+    color:          blueviolet;
+    line-height:    25px;   
+}
+
+/* ************************************************************************************************************************************************ */
+/* Menus */
+/* ************************************************************************************************************************************************ */
+div.sheet-menus {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    margin:          0px;
+    width:           100%;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    border-bottom:   2px solid black;
+}
+
+button.sheet-menus-button:before {
+    content: ''
+}
+
+button.sheet-menus-button {
+    width:  80px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+span.sheet-menus-span {
+    font-size:      12px;
+    vertical-align: middle;
+    text-align:     center;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    font-weight:    bold;
+    justify-self:   flex-start;
+    color:          black;
+}
+button.sheet-menus-button:hover>span.sheet-menus-span {
+    color: green
+}
+input.sheet-toggleTab[value="Bio"]~div.sheet-menus button.sheet-menus-button[value="Bio"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Phy"]~div.sheet-menus button.sheet-menus-button[value="Phy"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Ski"]~div.sheet-menus button.sheet-menus-button[value="Ski"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Eqi"]~div.sheet-menus button.sheet-menus-button[value="Eqi"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Fwa"]~div.sheet-menus button.sheet-menus-button[value="Fwa"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Swa"]~div.sheet-menus button.sheet-menus-button[value="Swa"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Pra"]~div.sheet-menus button.sheet-menus-button[value="Pra"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Rel"]~div.sheet-menus button.sheet-menus-button[value="Rel"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Not"]~div.sheet-menus button.sheet-menus-button[value="Not"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Mag"]~div.sheet-menus button.sheet-menus-button[value="Mag"]>span.sheet-menus-span,
+input.sheet-toggleTab[value="Sor"]~div.sheet-menus button.sheet-menus-button[value="Sor"]>span.sheet-menus-span
+{
+    color: red
+}
+
+button.sheet-menus-button[value="Fwa"],
+button.sheet-menus-button[value="Swa"],
+button.sheet-menus-button[value="Pra"],
+button.sheet-menus-button[value="Mag"],
+button.sheet-menus-button[value="Sor"]
+{
+    display : none;
+}
+
+input[type="hidden"][value="Priest"].sheet-toggleDest01~button.sheet-menus-button[value="Pra"],
+input[type="hidden"][value="Artist"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Assassin"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Courtier"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Scholar"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Warrior"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Healer"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Merchant"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Noble"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Paladin"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Pirate"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Ranger"].sheet-toggleDest01~button.sheet-menus-button[value="Fwa"],
+input[type="hidden"][value="Mage"].sheet-toggleDest01~button.sheet-menus-button[value="Mag"],
+input[type="hidden"][value="Sorcerer"].sheet-toggleDest01~button.sheet-menus-button[value="Sor"],
+input[type="hidden"][value="Priest"].sheet-toggleDest02~button.sheet-menus-button[value="Pra"],
+input[type="hidden"][value="Artist"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Assassin"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Courtier"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Scholar"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Warrior"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Healer"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Merchant"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Noble"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Paladin"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Pirate"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Ranger"].sheet-toggleDest02~button.sheet-menus-button[value="Swa"],
+input[type="hidden"][value="Mage"].sheet-toggleDest02~button.sheet-menus-button[value="Mag"],
+input[type="hidden"][value="Sorcerer"].sheet-toggleDest02~button.sheet-menus-button[value="Sor"]
+{
+    display : block;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Header */
+/* ************************************************************************************************************************************************ */
+div.sheet-header {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    justify-content: space-between;
+    margin:          0px;
+    width:           100%;
+    border-top:      2px solid black;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Header columns */
+/* ************************************************************************************************************************************************ */
+div.sheet-header-ambition {
+    display:        flex;
+    flex-direction: column;
+    flex-wrap:      nowrap;
+    width:          100%;
+    margin:         0px;
+    padding:        0 auto 0 auto;
+    border-bottom:  2px solid black;
+    border-left:    2px solid black;
+    border-right:   2px solid black
+}
+
+div.sheet-header-col-data {
+    display:        flex;
+    flex-direction: column;
+    width:          380px;
+    margin:         0px;
+    padding:        0 auto 0 auto;
+    border-radius:  0;
+    justify-self:   flex-start;
+}
+
+div.sheet-header-col-data-2 {
+    display:        flex;
+    flex-direction: column;
+    width:          240px;
+    margin:         0px;
+    padding:        0 auto 0 auto;
+    border-radius:  0;
+}
+
+div.sheet-header-col-banner {
+    width:           150px;
+    margin:          0px 0px 0px 0px;
+    padding:         0px 0px 0px 0px;
+    border-radius:   0;
+    justify-self:    flex-end;
+    justify-content: center;
+    align-items:     center;
+}
+
+label.sheet-header-label-nor,
+label.sheet-header-label-ang,
+label.sheet-header-label-vas,
+label.sheet-header-label-rac,
+label.sheet-header-label-des,
+label.sheet-header-label-rep,
+div.sheet-header-label-amb,
+label.sheet-header-label-des02,
+label.sheet-header-label-des0202 {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       wrap;
+    font-size:       12px;
+    justify-content: center;
+    align-items:     center;
+    padding:         1px auto 1px auto;
+    margin:          0px;
+}
+
+label.sheet-header-label-ang,
+label.sheet-header-label-vas,
+label.sheet-header-label-rac,
+label.sheet-header-label-des,
+label.sheet-header-label-des02,
+label.sheet-header-label-des0202 {
+    display: none;
+}
+
+div.sheet-header-label-amb {
+    justify-content: left;
+}
+
+span.sheet-header-span {
+    font-size:      12px;
+    width:          90px;
+    color :       black;
+    vertical-align: middle;
+    text-align:     left;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    line-height:    25px;
+}
+div.sheet-header-col-data-2 span.sheet-header-span {
+    width: 90px;
+}
+div.sheet-header-ambition span.sheet-header-span {
+    margin-left:  9px;
+    margin-right: 28px;
+}
+
+input.sheet-header-input {
+    width:            275px;
+    margin:           0px;
+    border:           0;
+    border-bottom:    1px solid #000;
+    border-radius:    0;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           25px;
+    padding:          1px 1px 1px 1px;
+}
+
+div.sheet-header-col-data-2 input.sheet-header-input {
+    width: 100px;
+}
+div.sheet-header-ambition input.sheet-header-input {
+    width: 528px;
+}
+
+select.sheet-header-select {
+    width:            275px;
+    margin:           0px;
+    border:           0px;
+    outline:          0px;
+    border-bottom:    1px solid #000;
+    border-radius:    0;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           25px;
+    padding:          1px 1px 1px 1px;
+}
+div.sheet-header-col-data-2 select.sheet-header-select {
+    width: 100px;
+}
+
+img.sheet-header-banner {
+    width:  150px;
+    height: 150px;
+}
+
+input.sheet-toggleDestiny[value="Custom"] ~ label.sheet-header-label-des,
+input.sheet-toggleDestiny02[value="Custom"] ~ label.sheet-header-label-des0202
+{
+    display: flex;
+}
+
+input.sheet-toggleDestinyRank[value="6"]+label.sheet-header-label-des02,
+input.sheet-toggleDestinyRank[value="7"]+label.sheet-header-label-des02,
+input.sheet-toggleDestinyRank[value="8"]+label.sheet-header-label-des02,
+input.sheet-toggleDestinyRank[value="9"]+label.sheet-header-label-des02,
+input.sheet-toggleDestinyRank[value="10"]+label.sheet-header-label-des02{
+    display: flex;
+}
+
+input.sheet-toggleRace[value="Angel"] ~ label.sheet-header-label-ang,
+input.sheet-toggleRace[value="Vastaya"] ~ label.sheet-header-label-vas,
+input.sheet-toggleRace[value="Custom"] ~label.sheet-header-label-rac 
+{
+    display: flex;
+}
+
+span.sheet-header-input {
+    width:            45px;
+    margin:           0px;
+    border:           0;
+    border-bottom:    1px solid #000;
+    border-radius:    0;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           25px;
+    padding:          1px 1px 1px 1px;
+    color :         black;
+    font-weight:      normal;
+    line-height:      25px;
+    vertical-align:   middle;
+    text-align:       left;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Stats */
+/* ************************************************************************************************************************************************ */
+div.sheet-stat {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    border-bottom:   2px solid black;
+    justify-content: space-between;
+}
+
+div.sheet-stat-ten,
+div.sheet-stat-pre,
+div.sheet-stat-fer,
+div.sheet-stat-dom,
+div.sheet-stat-ast,
+div.sheet-stat-con,
+div.sheet-stat-img,
+div.sheet-stat-btn {
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    justify-content: center;
+    align-items:     center;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    width:           133px;
+}
+
+div.sheet-stat-img {
+    height: 95px;
+}
+
+span.sheet-stat-span {
+    font-size:      15px;
+    vertical-align: middle;
+    text-align:     center;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    font-weight:    bold;
+    justify-self:   flex-start;
+}
+
+img.sheet-stat-icon {
+    max-width:  133px;
+    max-height: 95px;
+}
+div.sheet-stat-pre img.sheet-stat-icon {
+    filter: hue-rotate(180deg)
+}
+div.sheet-stat-dom img.sheet-stat-icon {
+    filter: hue-rotate(100deg)
+}
+div.sheet-stat-ast img.sheet-stat-icon {
+    filter: hue-rotate(200deg)
+}
+
+input.sheet-stat-input {
+    margin:           0;
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          1px 1px 1px 1px;
+    text-align:       center;
+    font-size:        15px;
+    font-weight:      bold;
+    width :           20px;
+    height :          20px;
+    border-radius:    10%;
+}
+
+button.sheet-btn-roll{
+    width :  20px;
+    height : 20px;
+    margin:  0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+div.sheet-stat-ten input.sheet-stat-input {
+    border: 2px solid #000;
+    color : black;
+}
+div.sheet-stat-pre input.sheet-stat-input {
+    border: 2px solid #a77154;
+    color : #a77154;
+}
+div.sheet-stat-fer input.sheet-stat-input {
+    border: 2px solid #ceaa3c;
+    color : #ceaa3c;
+}
+div.sheet-stat-dom input.sheet-stat-input {
+    border: 2px solid #c92424;
+    color : #c92424;
+}
+div.sheet-stat-ast input.sheet-stat-input {
+    border: 2px solid #536d48;
+    color : #536d48;
+}
+div.sheet-stat-con input.sheet-stat-input {
+    border: 2px solid #4c687e;
+    color : #4c687e;
+}
+
+button.sheet-btn-roll{
+    width :  20px;
+    height : 20px;
+}
+/* ************************************************************************************************************************************************ */
+/* BioGrahicals Data */
+/* ************************************************************************************************************************************************ */
+div.sheet-bio {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Bio"]~div.sheet-bio
+{
+    display : flex
+}
+
+div.sheet-bio-title{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+
+div.sheet-phyDet,
+div.sheet-background,
+div.sheet-family,
+div.sheet-passives{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: space-between;
+}
+
+div.sheet-family,
+div.sheet-passives{ 
+    flex-direction:  column; 
+}
+
+div.sheet-phyDet-col {
+    display:         flex;
+    flex-direction:  column;
+    width:           50%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border-radius:   0;
+    justify-content: center;
+}
+
+div.sheet-phyDet-row,
+div.sheet-family-row {
+    display:         flex;
+    flex-direction:  row;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border-radius:   0;
+    justify-content: center;
+    font-size:       12px;
+    align-items:     center;
+}
+
+span.sheet-phyDet-span,
+span.sheet-family-span{
+    font-size:      12px;
+    width:          90px;
+    color :       black;
+    vertical-align: middle;
+    text-align:     right;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    padding-left:   2px;
+    line-height:    25px;
+    font-weight:    bold;
+}
+
+span.sheet-family-select{
+    font-size:      12px;
+    width:          100px;
+    color :       black;
+    vertical-align: middle;
+    text-align:     center;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    padding-left:   2px;
+    line-height:    25px;
+    border-bottom:  1px solid #000;
+}
+
+div.sheet-passives-row
+{
+    display:         flex;
+    flex-direction:  row;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border-radius:   0;
+    justify-content: center;
+    
+}
+
+div.sheet-passives-title{
+    display:         flex;
+    flex-direction:  row;
+    width:          50% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+span.sheet-passives-title{
+    font-size:      12px;
+    width:          50% !important;
+    color :       black;
+    vertical-align: middle;
+    text-align:     center;
+    height:         25px;
+    margin:         0px 0px 0px 0px;
+    padding:        0px 0px 0px 0px;
+    line-height:    25px;
+    font-weight:    bold;
+}
+
+textarea.sheet-passives-text{
+    width:            100%;
+    margin:           1px 1px 1px 1px;
+    border:           0px;
+    outline:          0px;
+    border:           1px solid #000;
+    border-radius:    10px;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           150px;
+    padding:          1px 1px 1px 1px;
+    align-self:       center;
+    justify-self:     center;
+    resize:           none;
+}
+
+select.sheet-phyDet-select,
+select.sheet-family-select{
+    width:            100px;
+    margin:           0px;
+    border:           0px;
+    outline:          0px;
+    border-bottom:    1px solid #000;
+    border-radius:    0;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           25px;
+    padding:          1px 1px 1px 1px;
+    text-align:       center;
+}
+
+input.sheet-phyDet-input,
+input.sheet-family-input{
+    width:            100px;
+    margin:           0px;
+    border:           0px;
+    outline:          0px;
+    border-bottom:    1px solid #000;
+    border-radius:    0;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           25px;
+    padding:          1px 1px 1px 1px;
+    text-align:       left;
+}
+
+input.sheet-phyDet-input{
+    text-align:       center;
+}
+
+input.sheet-family-input{
+    width:            200px;
+}
+
+textarea.sheet-phyDet-back{
+    width:            100%;
+    margin:           1px 1px 1px 1px;
+    border:           0px;
+    outline:          0px;
+    border:           1px solid #000;
+    border-radius:    10px;
+    background-color: transparent;
+    vertical-align:   middle;
+    height:           350px;
+    padding:          1px 1px 1px 1px;
+    align-self:       center;
+    justify-self:     center;
+    resize:           none;
+}
+/* ************************************************************************************************************************************************ */
+/* Physicals Data */
+/* ************************************************************************************************************************************************ */
+div.sheet-phy {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Phy"]~div.sheet-phy
+{
+    display : flex
+}
+
+
+/* ************************************************************************************************************************************************ */
+/* HP & Override */
+/* ************************************************************************************************************************************************ */
+div.sheet-hpo,
+div.sheet-armor,
+div.sheet-hpo-title,
+div.sheet-armor-title,
+div.sheet-hpo-wounds,
+div.sheet-hpo-over,
+div.sheet-armor-red,
+div.sheet-hpo-armor,
+div.sheet-hpo-wounds-stats,
+div.sheet-hpo-wounds-stats-3,
+div.sheet-hpo-detail,
+div.sheet-advantage-title,
+div.sheet-disadvantage-title,
+div.sheet-advantage,
+div.sheet-disadvantage {
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: space-between;
+}
+
+div.sheet-advantage,
+div.sheet-disadvantage{
+    flex-direction:  column;
+    justify-content: space-between;
+}
+
+div.sheet-hpo,
+div.sheet-hpo-title,
+div.sheet-armor-title,
+div.sheet-advantage-title,
+div.sheet-disadvantage-title{
+    justify-content: center;
+}
+
+div.sheet-hpo-over,
+div.sheet-hpo-armor,
+div.sheet-hpo-wounds,
+div.sheet-armor-red{
+    border:          none;
+    flex-direction:  column;
+    justify-content: space-between;
+}
+
+div.sheet-hpo-detail{
+    flex-direction:  column;
+    justify-content: space-between;
+}
+
+div.sheet-hpo-armor{
+    width:         60%;
+    border-right : 1px solid black
+}
+
+div.sheet-hpo-wounds{
+    width: 80%;
+}
+
+div.sheet-armor-red{
+    width: 40%;
+    border-left : 1px solid black
+}
+
+div.sheet-hpo-over{
+    width: 20%;
+    border-left : 1px solid black
+}
+
+div.sheet-hpo-wounds-stats,
+div.sheet-hpo-wounds-stats-3 {
+    border:          none;
+    width:           100%;
+    height:          20px;
+    flex-direction:  row;
+    justify-content: center;
+}
+
+div.sheet-hpo-wounds-stats-3{
+    display:         flex;
+    flex-direction:  row;
+    height:          40px;
+    justify-content: center;
+    vertical-align:  middle;
+}
+
+div.sheet-hpo-wounds-stats-2 {
+    display:         flex;
+    border:          none;
+    width:           50%;
+    height:          20;
+    flex-direction:  row;
+    justify-content: center;
+    vertical-align:  middle;
+}
+
+div.sheet-hpo-armor-detail{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           33%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    justify-content: center;
+}
+div.sheet-wounds-detail{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           12.5%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    justify-content: center;
+}
+
+div.sheet-armor-detail{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           50%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    justify-content: center;
+}
+
+div.sheet-hpo-armor-title,
+div.sheet-hpo-armor-stat{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    height:          20px;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    justify-content: center;
+}
+
+div.sheet-hpo-armor-title{
+    border-bottom :   1px solid black;
+}
+
+div.sheet-hpo-wounds-stats-title{
+    display:         flex;
+    border:          none;
+    width:           100%;
+    height:          20;
+    flex-direction:  row;
+    justify-content: center;
+    align-items:     center;
+    background :   grey;
+    border-bottom :  1px solid black
+}
+
+div.sheet-advantage-header{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    border:          0;
+    padding:         0 auto 0 auto;
+    border-bottom:   1px solid black;
+    justify-content: space-between;
+}
+
+div.sheet-advantage-row{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    border:          0;
+    padding:         0 auto 0 auto;
+    justify-content: space-between;
+}
+
+div.sheet-advantage-col1{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           20%;
+    margin:          0px;
+    border:          0;
+    padding:         0 auto 0 auto;
+}
+
+div.sheet-advantage-col2{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           80%;
+    margin:          0px;
+    border:          0;
+    padding:         0 auto 0 auto;
+}
+
+div#middle{
+    border-right :   1px solid black;
+    border-left :    1px solid black;
+}
+
+div#end{
+    border-left :    1px solid black;
+}
+
+span.sheet-wounds-title {
+    font-size:        15px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    height :          20px;
+    width :           150px;
+    font-weight:      bold; 
+    line-height:      20px;    
+    align-self:       center;
+}
+
+span.sheet-wounds-label {
+    font-size:        12px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           2px 2px 2px 2px;
+    text-align:       right;
+    height :          20px;
+    width :           50px;
+    font-weight:      bold; 
+    line-height:      20px;    
+}
+
+span.sheet-wounds-stats {
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           2px 2px 2px 2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           30px;
+    height :          20px;
+    border-bottom:    1px solid black;
+    line-height:      20px; 
+}
+
+span.sheet-armor-title{
+    font-size:        15px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    height :          20px;
+    width :           200px;
+    font-weight:      bold; 
+    line-height:      20px;    
+    align-self:       center;
+}
+
+span.sheet-armor-label{
+    font-size:        12px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    text-align:       center;
+    height :          20px;
+    width :           80px;
+    font-weight:      bold; 
+    line-height:      20px; 
+}
+
+span.sheet-armor-stats{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    margin-bottom:    2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           30px;
+    height :          20px;
+    border-bottom:    1px solid black;
+    line-height:      20px; 
+}
+
+span.sheet-wounds-hpRange{
+    font-size :     12px;
+    width :         100%;
+    height:         15px;
+    line-height:    15px;
+    text-align:     center;
+    font-weight:    900;
+    margin:         2px 2px 2px 2px;
+    vertical-align: middle;
+}
+
+span.sheet-adv-label{
+    font-size:        12px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    text-align:       center;
+    height :          20px;
+    width :           100%;
+    font-weight:      bold; 
+    line-height:      20px; 
+}
+
+span#tableTitle{
+    font-size : 10px;
+    width : 100%;
+}
+
+input.sheet-wounds-input{
+    border:        none;
+    border-bottom: 1px solid black;
+    background:    none;
+    height :       20px;
+    width:         30px;
+    border-radius: 0;
+}
+
+input.sheet-advantage-input{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       20px;
+    width:         100%;
+    border-radius: 0;
+    justify-self:  center;
+    align-self:    center;
+    margin:        2px;
+}
+
+textarea.sheet-advantage-text{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       50px;
+    width:         100%;
+    justify-self:  center;
+    align-self:    center;
+    resize:        none;
+    margin:        2px;
+    padding:       none;
+}
+
+input.sheet-toggleRange[value="0"]+span.sheet-wounds-hpRange{
+    background: -webkit-linear-gradient(0deg,red 0%, green 0% 100%);
+}
+input.sheet-toggleRange[value="1"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 1%, green 1% 100%);
+}
+input.sheet-toggleRange[value="2"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 2%, green 2% 100%);
+}
+input.sheet-toggleRange[value="3"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 3%, green 3% 100%);
+}
+input.sheet-toggleRange[value="4"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 4%, green 4% 100%);
+}
+input.sheet-toggleRange[value="5"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 5%, green 5% 100%);
+}
+input.sheet-toggleRange[value="6"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 6%, green 6% 100%);
+}
+input.sheet-toggleRange[value="7"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 7%, green 7% 100%);
+}
+input.sheet-toggleRange[value="8"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 8%, green 8% 100%);
+}
+input.sheet-toggleRange[value="9"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 9%, green 9% 100%);
+}
+input.sheet-toggleRange[value="10"]+span.sheet-wounds-hpRange {
+    background: linear-gradient(to right,red 0% 10%, green 10% 100%)
+}
+input.sheet-toggleRange[value="11"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 11%, green 11% 100%);
+}
+input.sheet-toggleRange[value="12"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 12%, green 12% 100%);
+}
+input.sheet-toggleRange[value="13"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 13%, green 13% 100%);
+}
+input.sheet-toggleRange[value="14"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 14%, green 14% 100%);
+}
+input.sheet-toggleRange[value="15"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 15%, green 15% 100%);
+}
+input.sheet-toggleRange[value="16"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 16%, green 16% 100%);
+}
+input.sheet-toggleRange[value="17"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 17%, green 17% 100%);
+}
+input.sheet-toggleRange[value="18"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 18%, green 18% 100%);
+}
+input.sheet-toggleRange[value="19"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 19%, green 19% 100%);
+}
+input.sheet-toggleRange[value="20"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 20%, green 20% 100%);
+}
+input.sheet-toggleRange[value="21"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 21%, green 21% 100%);
+}
+input.sheet-toggleRange[value="22"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 22%, green 22% 100%);
+}
+input.sheet-toggleRange[value="23"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 23%, green 23% 100%);
+}
+input.sheet-toggleRange[value="24"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 24%, green 24% 100%);
+}
+input.sheet-toggleRange[value="25"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 25%, green 25% 100%);
+}
+input.sheet-toggleRange[value="26"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 26%, green 26% 100%);
+}
+input.sheet-toggleRange[value="27"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 27%, green 27% 100%);
+}
+input.sheet-toggleRange[value="28"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 28%, green 28% 100%);
+}
+input.sheet-toggleRange[value="29"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 29%, green 29% 100%);
+}
+input.sheet-toggleRange[value="30"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 30%, green 30% 100%);
+}
+input.sheet-toggleRange[value="31"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 31%, green 31% 100%);
+}
+input.sheet-toggleRange[value="32"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 32%, green 32% 100%);
+}
+input.sheet-toggleRange[value="33"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 33%, green 33% 100%);
+}
+input.sheet-toggleRange[value="34"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 34%, green 34% 100%);
+}
+input.sheet-toggleRange[value="35"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 35%, green 35% 100%);
+}
+input.sheet-toggleRange[value="36"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 36%, green 36% 100%);
+}
+input.sheet-toggleRange[value="37"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 37%, green 37% 100%);
+}
+input.sheet-toggleRange[value="38"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 38%, green 38% 100%);
+}
+input.sheet-toggleRange[value="39"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 39%, green 39% 100%);
+}
+input.sheet-toggleRange[value="40"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 40%, green 40% 100%);
+}
+input.sheet-toggleRange[value="41"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 41%, green 41% 100%);
+}
+input.sheet-toggleRange[value="42"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 42%, green 42% 100%);
+}
+input.sheet-toggleRange[value="43"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 43%, green 43% 100%);
+}
+input.sheet-toggleRange[value="44"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 44%, green 44% 100%);
+}
+input.sheet-toggleRange[value="45"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 45%, green 45% 100%);
+}
+input.sheet-toggleRange[value="46"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 46%, green 46% 100%);
+}
+input.sheet-toggleRange[value="47"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 47%, green 47% 100%);
+}
+input.sheet-toggleRange[value="48"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 48%, green 48% 100%);
+}
+input.sheet-toggleRange[value="49"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 49%, green 49% 100%);
+}
+input.sheet-toggleRange[value="50"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 50%, green 50% 100%);
+}
+input.sheet-toggleRange[value="51"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 51%, green 51% 100%);
+}
+input.sheet-toggleRange[value="52"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 52%, green 52% 100%);
+}
+input.sheet-toggleRange[value="53"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 53%, green 53% 100%);
+}
+input.sheet-toggleRange[value="54"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 54%, green 54% 100%);
+}
+input.sheet-toggleRange[value="55"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 55%, green 55% 100%);
+}
+input.sheet-toggleRange[value="56"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 56%, green 56% 100%);
+}
+input.sheet-toggleRange[value="57"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 57%, green 57% 100%);
+}
+input.sheet-toggleRange[value="58"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 58%, green 58% 100%);
+}
+input.sheet-toggleRange[value="59"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 59%, green 59% 100%);
+}
+input.sheet-toggleRange[value="60"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 60%, green 60% 100%);
+}
+input.sheet-toggleRange[value="61"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 61%, green 61% 100%);
+}
+input.sheet-toggleRange[value="62"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 62%, green 62% 100%);
+}
+input.sheet-toggleRange[value="63"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 63%, green 63% 100%);
+}
+input.sheet-toggleRange[value="64"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 64%, green 64% 100%);
+}
+input.sheet-toggleRange[value="65"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 65%, green 65% 100%);
+}
+input.sheet-toggleRange[value="66"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 66%, green 66% 100%);
+}
+input.sheet-toggleRange[value="67"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 67%, green 67% 100%);
+}
+input.sheet-toggleRange[value="68"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 68%, green 68% 100%);
+}
+input.sheet-toggleRange[value="69"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 69%, green 69% 100%);
+}
+input.sheet-toggleRange[value="70"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 70%, green 70% 100%);
+}
+input.sheet-toggleRange[value="71"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 71%, green 71% 100%);
+}
+input.sheet-toggleRange[value="72"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 72%, green 72% 100%);
+}
+input.sheet-toggleRange[value="73"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 73%, green 73% 100%);
+}
+input.sheet-toggleRange[value="74"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 74%, green 74% 100%);
+}
+input.sheet-toggleRange[value="75"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 75%, green 75% 100%);
+}
+input.sheet-toggleRange[value="76"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 76%, green 76% 100%);
+}
+input.sheet-toggleRange[value="77"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 77%, green 77% 100%);
+}
+input.sheet-toggleRange[value="78"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 78%, green 78% 100%);
+}
+input.sheet-toggleRange[value="79"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 79%, green 79% 100%);
+}
+input.sheet-toggleRange[value="80"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 80%, green 80% 100%);
+}
+input.sheet-toggleRange[value="81"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 81%, green 81% 100%);
+}
+input.sheet-toggleRange[value="82"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 82%, green 82% 100%);
+}
+input.sheet-toggleRange[value="83"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 83%, green 83% 100%);
+}
+input.sheet-toggleRange[value="84"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 84%, green 84% 100%);
+}
+input.sheet-toggleRange[value="85"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 85%, green 85% 100%);
+}
+input.sheet-toggleRange[value="86"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 86%, green 86% 100%);
+}
+input.sheet-toggleRange[value="87"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 87%, green 87% 100%);
+}
+input.sheet-toggleRange[value="88"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 88%, green 88% 100%);
+}
+input.sheet-toggleRange[value="89"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 89%, green 89% 100%);
+}
+input.sheet-toggleRange[value="90"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 90%, green 90% 100%);
+}
+input.sheet-toggleRange[value="91"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 91%, green 91% 100%);
+}
+input.sheet-toggleRange[value="92"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 92%, green 92% 100%);
+}
+input.sheet-toggleRange[value="93"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 93%, green 93% 100%);
+}
+input.sheet-toggleRange[value="94"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 94%, green 94% 100%);
+}
+input.sheet-toggleRange[value="95"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 95%, green 95% 100%);
+}
+input.sheet-toggleRange[value="96"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 96%, green 96% 100%);
+}
+input.sheet-toggleRange[value="97"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 97%, green 97% 100%);
+}
+input.sheet-toggleRange[value="98"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 98%, green 98% 100%);
+}
+input.sheet-toggleRange[value="99"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 99%, green 99%) 100%;
+}
+input.sheet-toggleRange[value="100"]+span.sheet-wounds-hpRange {
+    background: -webkit-linear-gradient(0deg,red 0% 100%, green 100%);
+}
+
+/* ************************************************************************************************************************************************ */
+/* Skills */
+/* ************************************************************************************************************************************************ */
+div.sheet-ski {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Ski"]~div.sheet-ski 
+{
+    display : flex
+}
+
+div.sheet-ski-title,
+div.sheet-ski-details,
+div.sheet-ski-row{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border-bottom:   2px solid black;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+div.sheet-ski,
+div.sheet-ski-title{
+    background-color: transparent;
+    justify-content: center;
+}
+
+div.sheet-ski-details{
+    background-color: transparent;
+    flex-direction: column;
+}
+
+div.sheet-ski-row{
+    background-color: transparent;
+    flex-direction: row;
+    border :        0;
+    justify-content: space-between;
+}
+
+div.sheet-ski-name{
+    background-color: transparent;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           20%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+div.sheet-ski-rank{
+    background-color: transparent;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           5%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+
+div.sheet-ski-trait{
+    background-color: transparent;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           20%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+
+div.sheet-ski-spe{
+    background-color: transparent;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           20%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+
+div.sheet-ski-bonRol,
+div.sheet-ski-bonKee,
+div.sheet-ski-bonBon{
+    background-color: transparent;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           5%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+
+div.sheet-ski-rolav,
+div.sheet-ski-roldi,
+div.sheet-ski-rol{
+    background-color: transparent;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           5%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+
+span.sheet-ski-head{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    margin-bottom:    2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           100%;
+    height :          20px;
+    line-height:      20px;
+    font-weight:      bold;
+}
+
+span.sheet-ski-span,
+select.sheet-ski-select,
+input.sheet-ski-span{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    margin-bottom:    2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           100%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+input.sheet-ski-input{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    margin-bottom:    2px;
+    text-align:       center;
+    font-size:        12px;
+    width :           20px;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+div#head{
+    border-bottom:    1px solid black;
+}
+
+div#fer{
+    background-color: rgba(206, 170, 60, .2);
+}
+
+div#pre{
+    background-color: rgba(167, 113, 84, .2);
+}
+
+div#ten{
+    background-color: rgba(0, 0, 0, .2);
+}
+
+div#dom{
+    background-color: rgba(201, 36, 36, .2);
+}
+
+div#con{
+    background-color: rgba(76, 104, 126, .2);
+}
+
+div#tri{
+    background-color: rgba(83, 109, 72, .2);
+}
+
+button.sheet-ski-roll::before{
+    content: ' ';
+}
+
+button.sheet-ski-roll{
+    content: ' ';
+    border:  none;
+    background-color: transparent;
+    background-position:center;
+    font-size: large;
+    font-family: 'dicefontd10';
+    background-image: none;    
+    border: 0;    
+    box-shadow: none;    
+    text-align: left;    
+    text-shadow: initial;
+}
+
+button.sheet-ski-roll:hover{
+    color:  blue;
+}
+
+button.sheet-ski-roll:active{
+    color: red;
+}
+/* ************************************************************************************************************************************************ */
+/* Equipments */
+/* ************************************************************************************************************************************************ */
+div.sheet-eqi {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Eqi"]~div.sheet-eqi 
+{
+    display : flex
+}
+
+div.sheet-equi-title{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+
+div.sheet-equi-weapons,
+div.sheet-equi-treasure,
+div.sheet-equi-inventory{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+
+div.sheet-equi-weapons-det,
+div.sheet-equi-ammo{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           33%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border:          0 0 0 0;
+    justify-content: space-between;
+}
+
+div.sheet-equi-weapons-det~div.sheet-equi-weapons-det{
+    border-left:   2px solid black;
+    border-right:   2px solid black;
+}
+
+div.sheet-weapon-name,
+div.sheet-weapon-type,
+div.sheet-weapon-dmg,
+div.sheet-weapon-note,
+div.sheet-ammo-det{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    padding:         0 0 0 0;
+    border:          0 0 0 0;
+    width:           100%
+}
+
+div.sheet-weapon-dmg-det
+{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    padding:         0 0 0 0;
+    border:          0 0 0 0;
+    width:           80%
+}
+
+div.sheet-weapon-dmg-det-roll,
+div.sheet-weapon-dmg-det-keep,
+div.sheet-weapon-dmg-det-bonus,
+div.sheet-weapon-dmg-det-button
+{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    padding:         0 0 0 0;
+    border:          0 0 0 0;
+    width:           100%;
+    justify-content: Center;
+}
+
+div.sheet-equi-ammo{
+    width:           34%;
+}
+
+div.sheet-equi-weapons-head{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border:          0 0 0 0;
+    justify-content: space-between;
+    background-color : grey;
+    height           : 20px;
+    border-bottom:   2px solid black;
+}
+
+div.sheet-treasure-tab{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: space-between;
+}
+
+div.sheet-inventory-tab{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: space-between;
+}
+
+div.sheet-inventory-line{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: space-between;
+}
+
+div.sheet-treasure-detail{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           20%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    justify-content: center;
+}
+
+span.sheet-weapon-name,
+span.sheet-ammo-name{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       Right;
+    font-size:        12px;
+    width :           20%;
+    height :          20px;
+    border :          none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+}
+
+span.sheet-weapon-dmg-det{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       Right;
+    font-size:        10px;
+    width :           20%;
+    height :          20px;
+    border :          none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+}
+
+span.sheet-inventory-name,
+span.sheet-inventory-weight,
+span.sheet-inventory-self{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           80%;
+    height :          20px;
+    border :          none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+}
+
+span.sheet-inventory-weight,
+span.sheet-inventory-self{
+    width :           10%;
+}
+
+input.sheet-inventory-input,
+input.sheet-inventory-weight,
+input.sheet-inventory-self,
+input.sheet-weapon-dmg-det{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           1px 1px 1px 1px;
+    text-align:       Left;
+    font-size:        12px;
+    width :           80%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+input.sheet-weapon-dmg-det{
+    text-align:       center;
+}
+
+input.sheet-inventory-weight,
+input.sheet-inventory-self{
+    width :           10%;
+}
+
+input.sheet-wepons-input{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           80%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+input.sheet-ammo-input
+{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           40%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+input.sheet-ammo-inputqty{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           40%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+select.sheet-wepons-select{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           80%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+textarea.sheet-wepons-text{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       50px;
+    width:         80%;
+    resize:        none;
+    margin:        1px;
+    padding:       none;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Class Skills */
+/* ************************************************************************************************************************************************ */
+div.sheet-fwa,
+div.sheet-swa {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Fwa"]~div.sheet-fwa,
+input.sheet-toggleTab[value="Swa"]~div.sheet-swa
+{
+    display : flex
+}
+
+div.sheet-csk-title{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+div.sheet-csk-way,
+div.sheet-csk-waysec,
+div.sheet-csk-ultima{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border:          0;
+    justify-content: center;
+}
+
+input[type="hidden"][value="1"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="1"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="2"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="2"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="3"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="3"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="4"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="4"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="5"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="5"].sheet-toggleUltimaRank~div.sheet-csk-ultima
+{
+    display : none;
+}
+input[type="hidden"][value="6"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="6"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="7"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="7"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="8"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="8"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="9"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="9"].sheet-toggleUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="10"].sheet-toggleUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="10"].sheet-toggleUltimaRank~div.sheet-csk-ultima
+{
+    display : flex;
+}
+
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="1"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="1"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="2"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="2"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="3"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="3"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="4"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="4"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="5"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="5"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima
+{
+    display : none;
+}
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="6"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="6"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="7"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="7"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="8"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="8"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="9"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="9"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="10"].sheet-togglePrayerUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Priest"].sheet-togglePrayerUltima+input[type="hidden"][value="10"].sheet-togglePrayerUltimaRank~div.sheet-csk-ultima
+{
+    display : flex;
+}
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="1"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="1"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="2"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="2"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="3"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="3"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="4"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="4"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="5"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="5"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima
+{
+    display : none;
+}
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="6"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="6"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="7"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="7"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="8"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="8"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="9"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="9"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="10"].sheet-toggleMagicUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Mage"].sheet-toggleMagicUltima+input[type="hidden"][value="10"].sheet-toggleMagicUltimaRank~div.sheet-csk-ultima
+{
+    display : flex;
+}
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="1"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="1"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="2"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="2"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="3"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="3"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="4"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="4"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="5"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="5"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima
+{
+    display : none;
+}
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="6"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="6"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="7"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="7"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="8"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="8"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="9"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="9"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="10"].sheet-toggleSorceryUltimaRank~div.sheet-csk-title,
+input[type="hidden"][value="Sorcerer"].sheet-toggleSorceryUltima+input[type="hidden"][value="10"].sheet-toggleSorceryUltimaRank~div.sheet-csk-ultima
+{
+    display : flex;
+}
+
+div.sheet-csk-way-selector
+{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border:          none;
+    justify-content: center;
+}
+
+div.sheet-way-det{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 0 0 0;
+    border-bottom:   1px solid black;
+    justify-content: center;
+}
+
+span.sheet-csk-name{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           10%;
+    height :          20px;
+    border :          none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+}
+
+span.sheet-ult-name,
+span.sheet-ult-desc{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           20%;
+    height :          20px;
+    border :          none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+}
+
+span.sheet-ult-desc{
+    width :           80%;
+}
+
+input.sheet-ult-name{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           20%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+textarea.sheet-ult-desc{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       60px;
+    width:         80%;
+    resize:        none;
+    margin:        1px;
+    padding:       none;
+}
+
+select.sheet-csk-select{
+    display:          none;
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           30%;
+    height :          20px;
+    border-bottom :   1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+}
+
+input[type="hidden"][value="Artist"]~select.sheet-csk-select#Artist,
+input[type="hidden"][value="Assassin"]~select.sheet-csk-select#Assassin,
+input[type="hidden"][value="Courtier"]~select.sheet-csk-select#Courtier,
+input[type="hidden"][value="Scholar"]~select.sheet-csk-select#Scholar,
+input[type="hidden"][value="Warrior"]~select.sheet-csk-select#Warrior,
+input[type="hidden"][value="Healer"]~select.sheet-csk-select#Healer,
+input[type="hidden"][value="Mage"]~select.sheet-csk-select#Mage,
+input[type="hidden"][value="Merchant"]~select.sheet-csk-select#Merchant,
+input[type="hidden"][value="Noble"]~select.sheet-csk-select#Noble,
+input[type="hidden"][value="Paladin"]~select.sheet-csk-select#Paladin,
+input[type="hidden"][value="Pirate"]~select.sheet-csk-select#Pirate,
+input[type="hidden"][value="Ranger"]~select.sheet-csk-select#Ranger
+{
+    display: flex;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Prayers */
+/* ************************************************************************************************************************************************ */
+div.sheet-pra {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Pra"]~div.sheet-pra 
+{
+    display : flex
+}
+
+div.sheet-pra-title,
+div.sheet-pra-det{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+
+div.sheet-pra-det{
+    flex-direction:  column;
+}
+
+div.sheet-pra-header,
+div.sheet-pra-line{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0;
+    padding:         0 auto 0 auto;
+    border-bottom:   1px solid black;
+    justify-content: space-between;
+}
+
+span.sheet-pra-rank,
+span.sheet-pra-name,
+span.sheet-pra-desc{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           10%;
+    height :          20px;
+    border:           none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+    align-self:       center;
+}
+
+span.sheet-pra-name{
+    width:        25%;
+}
+
+span.sheet-pra-desc{
+    width:        70%;
+}
+
+div.sheet-pra-line span.sheet-pra-rank{
+    font-weight:      normal;
+}
+
+input.sheet-pra-input{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       left;
+    font-size:        12px;
+    width :           25%;
+    height :          20px;
+    border :          none;
+    border-bottom:    1px solid black;
+    line-height:      20px;
+    border-radius:    0;
+    align-self:       center;
+}
+
+textarea.sheet-pra-desc{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       70px;
+    width:         70%;
+    resize:        none;
+    margin:        2px;
+    padding:       none;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Magics */
+/* ************************************************************************************************************************************************ */
+div.sheet-mag {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Mag"]~div.sheet-mag 
+{
+    display : flex
+}
+
+input[type=number].sheet-pra-input{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           10% !important;
+    height :          20px;
+    border:           none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      normal;
+    align-self:       center;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Sorcery */
+/* ************************************************************************************************************************************************ */
+div.sheet-sor {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Sor"]~div.sheet-sor 
+{
+    display : flex
+}
+
+/* ************************************************************************************************************************************************ */
+/* Relation */
+/* ************************************************************************************************************************************************ */
+div.sheet-rel {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Rel"]~div.sheet-rel 
+{
+    display : flex
+}
+
+div.sheet-rel-title{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+
+div.sheet-glory,
+div.sheet-ally,
+div.sheet-enne{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: space-between;
+}
+
+div.sheet-glory-head,
+div.sheet-ally-head,
+div.sheet-enne-head{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   1px solid black;
+    justify-content: space-between;
+}
+
+div.sheet-glory-det,
+div.sheet-ally-det,
+div.sheet-enne-det{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border:          none;
+    justify-content: space-between;
+}
+
+div.sheet-glory-col{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           10%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border:          none;
+    justify-content: space-between;
+}
+
+div.sheet-ally-col,
+div.sheet-enne-col{
+    display:         flex;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           30%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border:          none;
+    justify-content: center;
+    align-items:     center;
+}
+
+div.sheet-ally-col+div.sheet-ally-col{
+    width:           70%;
+}
+
+span.sheet-rel-name,
+span.sheet-ally-name,
+span.sheet-ally-desc{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+    text-align:       center;
+    font-size:        12px;
+    width :           100%;
+    height :          20px;
+    border:           none;
+    line-height:      20px;
+    border-radius:    0;
+    font-weight:      bold;
+    align-self:       center;
+}
+img.sheet-rel-img{
+    margin: 1px;
+    width:  20px;
+    height: 20px;
+    align-self: center;
+}
+
+input.sheet-glory-input,
+input.sheet-ally-name{
+    background-color: transparent;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           1px;
+    text-align:       center;
+    font-size:        12px;
+    width :           100%;
+    height :          20px;
+    border:           none;
+    line-height:      20px;
+    border-radius:    0;
+    align-self:       center;
+    border-bottom:    1px solid black;
+    justify-self:     center;
+}
+
+textarea.sheet-ally-desc{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       60px;
+    width:         98%;
+    resize:        none;
+    margin:        2px;
+    padding:       none;
+}
+/* ************************************************************************************************************************************************ */
+/* Notes */
+/* ************************************************************************************************************************************************ */
+div.sheet-not {
+    display:         none;
+    flex-direction:  column;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-left:     2px solid black;
+    border-right:    2px solid black;
+    justify-content: space-between;
+}
+
+input.sheet-toggleTab[value="Not"]~div.sheet-not 
+{
+    display : flex
+}
+
+div.sheet-not-title,
+div.sheet-not-det{
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       nowrap;
+    width:           100%;
+    margin:          0px;
+    padding:         0 auto 0 auto;
+    border-bottom:   2px solid black;
+    justify-content: center;
+}
+
+textarea.sheet-not-desc{
+    border:        1px solid black;
+    border-radius: 5;
+    background:    none;
+    height :       500px;
+    width:         100%;
+    resize:        none;
+    margin:        2px;
+    padding:       none;
+}
+/* ************************************************************************************************************************************************ */
+/* PopUps */
+/* ************************************************************************************************************************************************ */
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity : 1;
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    margin: 70px auto;
+    padding: 20px;
+    background: grey;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    align-content: center;
+    align-items: center;
+}
+
+span.sheet-pop-title{
+    font-size:        12px;
+    color :         black;
+    margin:           0;
+    vertical-align:   middle;
+    padding:          0px 0px 0px 0px;
+    margin:           2px 2px 2px 2px;
+    text-align:       center;
+    height :          20px;
+    font-weight:      bold; 
+    line-height:      20px;    
+}
+
+div.sheet-contentPop{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+}
+
+div.sheet-buttonPop{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:          0px 0px 0px 0px;
+    margin:           0px 0px 0px 0px;
+}
+button.sheet-pop-validate:before{
+    content: '';
+}
+button.sheet-pop-validate{
+    border:  0px solid grey ;
+    background-color: transparent;
+    background-position:center;
+    font-size: large;
+}
+
+a.sheet-pop-close{
+    font-family: 'Pictos';
+    color: red;
+    content: '*';
+    font-size: large;
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a.sheet-pop-validate{
+    font-family: 'Pictos';
+    color: green;
+    content: '3';
+    font-size: large;
+    width: 25px;
+    height: 25px;
+    align-self: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* ************************************************************************************************************************************************ */
+/* Roll Template */
+/* ************************************************************************************************************************************************ */
+/* Smaller margins - remove these if you want the huge default left margin */
+.sheet-rolltemplate-custom {
+    margin-left: -37px;
+  }
+  .withoutavatars .sheet-rolltemplate-custom {
+    margin-left: -7px;
+  }
+  
+  .sheet-rolltemplate-custom .sheet-container {
+    border: 1px solid;
+    /* by default, the border is the same color as the header. You can change this here, e.g. to black */  border-color: var(--header-bg-color);
+  }
+  
+  /* Header formatting - title and subtitle */
+  .sheet-rolltemplate-custom .sheet-header {
+    background-color: var(--header-bg-color);
+    /* change text-align to center to center the header text */  text-align: left;
+    color: var(--header-text-color);
+    padding: 5px;
+  }
+  .sheet-rolltemplate-custom .sheet-title {
+    font-size:1.1em;
+  }
+  .sheet-rolltemplate-custom .sheet-subtitle {
+    font-size:.9em;
+  }
+  
+  /* example colors */
+  .sheet-rolltemplate-custom .sheet-container {
+    /* this is the default color */  --header-bg-color: rgba(112,32,130,1);
+    --header-text-color: #FFF;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-red {
+    --header-bg-color: #F00;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-green {
+    --header-bg-color: #0F0;  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-ten,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Ten {
+    --header-bg-color: #000;  --header-text-color: #ffffff;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-fer,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Fer {
+    --header-bg-color: rgb(206, 170, 60);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-pre,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Pre {
+    --header-bg-color: rgb(167, 113, 84);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-dom,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Dom {
+    --header-bg-color: rgb(201, 36, 36);;  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-con,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Con {
+    --header-bg-color: rgb(76, 104, 126);  --header-text-color: #000;
+  }
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-tri,
+  .sheet-rolltemplate-custom .sheet-container.sheet-color-Tri {
+    --header-bg-color: rgb(83, 109, 72);  --header-text-color: #000;
+  }
+
+  /* Allprops part */
+  .sheet-rolltemplate-custom .sheet-content {
+    display: grid;
+    background: #FFF;  /* Header formatting - modify the column layout below */  grid-template-columns: auto auto;
+    /* Line height to match default roll template */  line-height:1.4em;
+  }
+  .sheet-rolltemplate-custom .sheet-content > div {
+    padding: 5px;
+  }
+  
+  /* Left column */
+  .sheet-rolltemplate-custom .sheet-content .sheet-key {
+    font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+  }
+  
+  /* Empty rule, use this if you want to change the right column */
+  .sheet-rolltemplate-custom .sheet-value {
+    background : #ffffff
+  }
+  /* Make even-numbered rows grey */
+  .sheet-rolltemplate-custom .sheet-content :nth-child(4n+3),
+  .sheet-rolltemplate-custom .sheet-content :nth-child(4n) {
+    background:#EEE;
+  }
+  
+  /* Description field */
+  .sheet-rolltemplate-custom .sheet-desc {
+    grid-column: span 2;
+    padding: 5px;
+    text-align: center;
+  }
